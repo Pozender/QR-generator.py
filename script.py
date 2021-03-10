@@ -8,9 +8,8 @@ targetName = input("Entrez le nom de sortie du fichier: ")
 
 #files format
 PNG = targetName + ".png"
-SVG = targetName + ".svg"
-JPG = targetName + ".jpg"
-formats = [PNG, SVG, JPG]
+
+formats = [PNG]
 
 #Qr personalisation
 qr= qrcode.QRCode(
@@ -25,7 +24,7 @@ qr.add_data(objectToEncode)
 qr.make(fit=True)
 
 #output custom
-img = qr.make_image(fill_color= "black", back_color= "white")
+img = qr.make_image(fill_color= "black", back_color= "transparent")
 
 #output file
 try:
