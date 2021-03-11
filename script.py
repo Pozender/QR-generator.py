@@ -8,15 +8,16 @@ targetName = input("Entrez le nom de sortie du fichier: ")
 
 #files format
 PNG = targetName + ".png"
+JPG = targetName + ".jpg"
 
-formats = [PNG]
+formats = [PNG, JPG]
 
 #Qr personalisation
 qr= qrcode.QRCode(
     version = 1,
     error_correction= qrcode.constants.ERROR_CORRECT_Q,
-    box_size= 10,
-    border= 6,
+    box_size= 50,
+    border= 4,
 )
 
 #setting of data in the code
