@@ -15,8 +15,8 @@ formats = [PNG]
 qr= qrcode.QRCode(
     version = 1,
     error_correction= qrcode.constants.ERROR_CORRECT_Q,
-    box_size= 5,
-    border= 4,
+    box_size= 10,
+    border= 6,
 )
 
 #setting of data in the code
@@ -24,7 +24,7 @@ qr.add_data(objectToEncode)
 qr.make(fit=True)
 
 #output custom
-img = qr.make_image(fill_color= "black", back_color= "transparent")
+img = qr.make_image(fill_color= "black", back_color= "white")
 
 #output file
 try:
